@@ -27,3 +27,29 @@ while true; do
   expr $first_number + $second_number
   ;;
   "Subtraction")
+echo "Please provide the first number:"
+  read first_number
+  echo "Please provide the second number:"
+  read second_number
+  echo "The difference of $first_number and $second_number is:"
+  expr $first_number - $second_number
+  ;;
+  "Multiplication")
+  echo "Please provide the first number:"
+  read first_number
+  echo "Please provide the second number:"
+  read second_number
+  echo "The product of $first_number and $second_number is:"
+  expr $first_number '*' $second_number
+  ;;
+  "Exit")
+  echo "Thank you for using calculator."
+  exit 0
+  ;;
+  # If the selection does not match a supported operation, display an error message.
+  *)
+  echo "Sorry, this is not supported"
+  echo "Please try again!"
+  ;;
+  esac
+done
